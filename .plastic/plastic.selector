@@ -1,0 +1,4 @@
+repository "FPSDemo@wizards_cn@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
