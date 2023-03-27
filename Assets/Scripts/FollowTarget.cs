@@ -11,12 +11,16 @@ public class FollowTarget : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        offset = transform.position - player.position;
+        
+        
     }
 
     // 更新相机位置
     void LateUpdate() {
+        if ( player == null) {
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+            offset = transform.position - player.position;
+        }
         //世界坐标转化为局部坐标
         Vector3 targetPosition = player.position + player.TransformDirection(offset);
         //移动相机

@@ -11,14 +11,15 @@ public class Shell : MonoBehaviour
     // Start is called before the first frame update
 
 
-    public void OnTriggerEnter(Collider collider)
-    {
+    public void OnTriggerEnter(Collider collider) {
+        if (collider.tag == "TTT") {
+            return;
+        }
         AudioSource.PlayClipAtPoint(shellExplosionAudio,transform.position);
         Instantiate(shellExplosionPrefab, transform.position, transform.rotation);
         
-        GameObject.Destroy(this.gameObject);
-        if (collider.tag == "Tank")
-        {
+        Destroy(gameObject);
+        if (collider.tag == "Player"||collider.tag == "Enemy") {
             collider.SendMessage("TakeDamage");
         }
     }

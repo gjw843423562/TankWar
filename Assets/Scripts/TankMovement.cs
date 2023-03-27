@@ -13,17 +13,14 @@ public class TankMovement : MonoBehaviour
     public AudioClip dringAudio;
     private AudioSource _audioSource;
     private Rigidbody _rigidbody;
-    void Start()
-    {
+    void Start() {
         _audioSource = GetComponent("AudioSource") as AudioSource;
         _rigidbody = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        if (number ==0)
-        {
+    void FixedUpdate() {
+        if (number ==0) {
             return;
         }
         float h = Input.GetAxis("HorizontalPlayer"+number);

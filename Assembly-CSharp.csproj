@@ -48,11 +48,15 @@
      <Compile Include="Assets\Scripts\GameStart.cs" />
      <Compile Include="Assets\Scripts\FollowTarget.cs" />
      <Compile Include="Assets\Scripts\Shell.cs" />
+     <Compile Include="Assets\Scripts\EnemyMove.cs" />
+     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
+     <Compile Include="Assets\Test.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Fonts\Bowlby_One" />
      <Folder Include="Assets\Fonts" />
      <None Include="Assets\Fonts\Bowlby_One\OFL.txt" />
      <Folder Include="Assets\Prefabs" />
+     <Folder Include="Assets\Scenes\Main" />
      <Folder Include="Assets\Materials" />
      <Folder Include="Assets\Sprites" />
      <Folder Include="Assets\Scripts" />

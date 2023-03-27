@@ -11,8 +11,7 @@ public class TankAttack : MonoBehaviour
     public AudioClip shotAudio;
     private Transform firePosition;
         // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         firePosition = transform.Find("FirePosition");
     }
 
