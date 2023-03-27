@@ -58,13 +58,13 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-Hades/.idea
-Hades/obj
-Hades/Logs
-Hades/Library
-Hades/UserSettings
-Hades/Temp
+TankWar/.idea
+TankWar/obj
+TankWar/Logs
+TankWar/Library
+TankWar/UserSettings
+TankWar/Temp
 
 
-Hades/Build
-Hades/ServerData
+TankWar/Build
+TankWar/ServerData
