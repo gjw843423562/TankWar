@@ -2,34 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowTarget : MonoBehaviour
-{
-    public Transform Player1;
-    public Transform Player2;
+public class FollowTarget : MonoBehaviour {
+    private Transform player;
+    //玩家和相机的差
+    private Vector3 offset; 
+    //相机移动速度
+    private float speed = 3;
 
-    private Vector3 offset;
-
-    private Camera _camera;
     // Start is called before the first frame update
-    void Start()
-    {
-        offset = transform.position - (Player1.position + Player2.position) / 2;
-        _camera = this.GetComponent<Camera>();
+    void Start() {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        offset = transform.position - player.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Player1 ==null || Player2 == null)
-        {
-            return;
-        }
-        transform.position = (Player1.position + Player2.position) / 2 + offset;
-        float distance = Vector3.Distance(Player1.position, Player2.position);
-        float size = distance * 0.5f;
-        if (_camera.orthographicSize>=10)
-        {
-            _camera.orthographicSize = size;
-        }
+    // 更新相机位置
+    void LateUpdate() {
+        //世界坐标转化为局部坐标
+        Vector3 targetPosition = player.position + player.TransformDirection(offset);
+        //移动相机
+        transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+        //相机看向玩家的方向
+        transform.LookAt(player.position);
     }
 }
