@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\EnemyMove.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Test.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Fonts\Bowlby_One" />
      <Folder Include="Assets\Fonts" />
